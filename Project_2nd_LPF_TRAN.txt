@@ -1,0 +1,13 @@
+* E:\PROECT_Main\VCO\Automation\Project_2nd_LPF_TRAN.asc
+V1 N001 0 SINE(0 5 {Freq} 0 0)
+C1 N002 0 {Cap1}
+C2 N003 0 {Cap2}
+R1 N002 N001 {Res1}
+R2 N003 N002 {Res2}
+.tran 5m
+.param Freq=1k
+.param Res1=1k Cap1=0.1u Res2=1k Cap2=0.1u
+.options plotwinsize=0
+.save V(in) V(out)
+.backanno
+.end
