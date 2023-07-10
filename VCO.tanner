@@ -1,0 +1,7 @@
+workspace loadfrom -path .
+cell open -design VCO -cell Cell0 -type schematic -newwindow
+window move -left 160 -top 160 -width 1413 -height 583 -undock -max 
+window fit -x0 -5045 -y0 -3567 -x1 7220 -y1 2379 -units iu
+workspace dockinglayout load -file dockinglayout.xml
+source open.design -relativeto user -encoding utf-8
+source open.design -relativeto design -encoding utf-8

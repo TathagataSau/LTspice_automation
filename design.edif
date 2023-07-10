@@ -1,0 +1,1763 @@
+(edif VCO
+	(edifVersion 2 0 0)
+	(edifLevel 0)
+	(keywordMap
+		(keywordLevel 0)
+	)
+	(status
+		(written
+			(timeStamp 2023 04 03 14 46 56)
+			(author "Tathagata Sau")
+			(program "Tanner EDA S-Edit"
+				(version "16.30 build 9172")
+			)
+			(property TannerEdifVersion
+				(integer 10)
+			)
+		)
+	)
+	(external SPICE_Elements
+		(edifLevel 0)
+		(technology
+			(numberDefinition
+				(scale 1
+					(e 1 -12)
+					(unit CAPACITANCE)
+				)
+				(scale 5000000
+					127
+					(unit DISTANCE)
+				)
+			)
+		)
+		
+		(cell VoltageSource
+			(cellType GENERIC)
+			(view DC
+				(viewType SCHEMATIC)
+				(interface
+					(port Neg)
+					(port Pos)
+					(property TannerStandard
+						(boolean
+							(true)
+						)
+						(property Author
+							(string "Tanner EDA Library Development Team")
+						)
+						(property Organization
+							(string "Tanner EDA - Mentor Graphics")
+						)
+						(property RevisionCount
+							(string "24")
+						)
+					)
+					(symbol)
+				)
+			)
+		)
+	)
+	(external Devices
+		(edifLevel 0)
+		(technology
+			(numberDefinition
+				(scale 1
+					(e 1 -12)
+					(unit CAPACITANCE)
+				)
+				(scale 800000
+					127
+					(unit DISTANCE)
+				)
+			)
+		)
+		
+		(cell PMOS
+			(cellType GENERIC)
+			(view PMOS3
+				(viewType SCHEMATIC)
+				(interface
+					(port D)
+					(port G
+						(direction INPUT)
+					)
+					(port S)
+					(property TannerStandard
+						(boolean
+							(true)
+						)
+						(property RevisionCount
+							(string "4")
+						)
+					)
+					(symbol)
+				)
+			)
+		)
+		(cell NMOS
+			(cellType GENERIC)
+			(view NMOS3
+				(viewType SCHEMATIC)
+				(interface
+					(port D)
+					(port G
+						(direction INPUT)
+					)
+					(port S)
+					(property TannerStandard
+						(boolean
+							(true)
+						)
+						(property RevisionCount
+							(string "4")
+						)
+					)
+					(symbol)
+				)
+			)
+		)
+	)
+	(external Misc
+		(edifLevel 0)
+		(technology
+			(numberDefinition
+				(scale 1
+					(e 1 -12)
+					(unit CAPACITANCE)
+				)
+				(scale 800000
+					127
+					(unit DISTANCE)
+				)
+			)
+		)
+		
+		(cell Vdd
+			(cellType GENERIC)
+			(view Main
+				(viewType SCHEMATIC)
+				(interface
+					(port Vdd
+						(property GLOBAL
+							(boolean
+								(true)
+							)
+						)
+					)
+					(property TannerStandard
+						(boolean
+							(true)
+						)
+						(property RevisionCount
+							(string "4")
+						)
+					)
+					(symbol)
+				)
+			)
+		)
+		(cell Gnd
+			(cellType GENERIC)
+			(view Main
+				(viewType SCHEMATIC)
+				(interface
+					(port Gnd
+						(property GLOBAL
+							(boolean
+								(true)
+							)
+						)
+					)
+					(property TannerStandard
+						(boolean
+							(true)
+						)
+						(property RevisionCount
+							(string "4")
+						)
+					)
+					(symbol)
+				)
+			)
+		)
+	)
+	(library VCO
+		(edifLevel 0)
+		(technology
+			(numberDefinition
+				(scale 1
+					(e 1 -12)
+					(unit CAPACITANCE)
+				)
+				(scale 2560000
+					127
+					(unit DISTANCE)
+				)
+			)
+			(figureGroup background
+				(visible
+					(true)
+				)
+				(color 0 0 0)
+				(pathWidth 0)
+			)
+			(figureGroup device
+				(visible
+					(true)
+				)
+				(color 0 80 40)
+				(pathWidth 0)
+			)
+			(figureGroup wire
+				(visible
+					(true)
+				)
+				(color 23 75 100)
+				(pathWidth 0)
+			)
+			(figureGroup netlabel
+				(visible
+					(true)
+				)
+				(color 23 75 100)
+				(pathWidth 0)
+			)
+			(figureGroup text
+				(visible
+					(true)
+				)
+				(color 100 0 0)
+				(pathWidth 0)
+			)
+			(figureGroup portshape
+				(visible
+					(true)
+				)
+				(color 100 0 100)
+				(pathWidth 0)
+			)
+			(figureGroup pin
+				(visible
+					(true)
+				)
+				(color 100 0 100)
+				(pathWidth 0)
+			)
+			(figureGroup instance
+				(visible
+					(false)
+				)
+				(color 85 80 0)
+				(pathWidth 0)
+			)
+			(figureGroup instance_with_name_visible
+				(visible
+					(true)
+				)
+				(color 85 80 0)
+				(pathWidth 0)
+			)
+			(figureGroup cellname
+				(visible
+					(false)
+				)
+				(color 0 80 40)
+				(pathWidth 0)
+			)
+			(figureGroup cellname_with_name_visible
+				(visible
+					(true)
+				)
+				(color 0 80 40)
+				(pathWidth 0)
+			)
+			(figureGroup property
+				(visible
+					(true)
+				)
+				(color 75 75 75)
+				(pathWidth 0)
+			)
+		)
+		
+		(cell Cell0
+			(cellType GENERIC)
+			(view vco
+				(viewType SCHEMATIC)
+				(interface
+					(port Out
+						(direction OUTPUT)
+					)
+					(property TannerViewName
+						(string "view0")
+						(owner "Tanner EDA, A Mentor Graphics Company")
+					)
+				)
+				(property TannerStandard
+					(boolean
+						(true)
+					)
+					(property RevisionCount
+						(string "1")
+					)
+				)
+				(status
+					(written
+						(timeStamp 2023 04 03 14 46 56)
+					)
+				)
+				(property
+					(rename Spice_PERIOD_DCOP_PERIOD_Enable "Spice.DCOP.Enable")
+					(boolean (true))
+				)
+				(property
+					(rename Spice_PERIOD_Transient_PERIOD_Step "Spice.Transient.Step")
+					(string ".5")
+				)
+				(property
+					(rename Spice_PERIOD_Transient_PERIOD_Stop "Spice.Transient.Stop")
+					(string "50m")
+				)
+				(property
+					(rename Spice_PERIOD_Transient_PERIOD_Enable "Spice.Transient.Enable")
+					(boolean (true))
+				)
+				(contents
+					(page Page0
+						(portImplementation
+							(name Out
+								(display
+									(figureGroupOverride pin
+										(textHeight 57)
+									)
+									(justify CENTERLEFT)
+									(origin
+										(pt 5536 -640)
+									)
+								)
+							)
+							(connectLocation
+								(figure portshape
+									(dot
+										(pt 5536 -640)
+									)
+								)
+							)
+							(figure portshape
+								(rectangle
+									(pt 5532 -644)
+									(pt 5540 -636)
+								)
+							)
+						)
+						(instance V1
+							(viewRef DC
+								(cellRef VoltageSource
+									(libraryRef SPICE_Elements)
+								)
+							)
+							(transform
+								(origin
+									(pt -3232 -2024)
+								)
+							)
+						)
+						(instance V2
+							(viewRef DC
+								(cellRef VoltageSource
+									(libraryRef SPICE_Elements)
+								)
+							)
+							(transform
+								(origin
+									(pt -4192 568)
+								)
+							)
+						)
+						(instance GND1
+							(viewRef Main
+								(cellRef Gnd
+									(libraryRef Misc)
+								)
+							)
+							(transform
+								(origin
+									(pt 4736 -2848)
+								)
+							)
+						)
+						(instance GND2
+							(viewRef Main
+								(cellRef Gnd
+									(libraryRef Misc)
+								)
+							)
+							(transform
+								(origin
+									(pt -3232 -2656)
+								)
+							)
+						)
+						(instance GND3
+							(viewRef Main
+								(cellRef Gnd
+									(libraryRef Misc)
+								)
+							)
+							(transform
+								(origin
+									(pt -4192 -32)
+								)
+							)
+						)
+						(instance Vdd1
+							(viewRef Main
+								(cellRef Vdd
+									(libraryRef Misc)
+								)
+							)
+							(transform
+								(origin
+									(pt 4704 1728)
+								)
+							)
+						)
+						(instance Vdd2
+							(viewRef Main
+								(cellRef Vdd
+									(libraryRef Misc)
+								)
+							)
+							(transform
+								(origin
+									(pt -4192 576)
+								)
+							)
+						)
+						(instance NMOS_1
+							(viewRef NMOS3
+								(cellRef NMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt -912 -1972)
+								)
+							)
+						)
+						(instance NMOS_2
+							(viewRef NMOS3
+								(cellRef NMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt 336 -948)
+								)
+							)
+						)
+						(instance NMOS_3
+							(viewRef NMOS3
+								(cellRef NMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt 1552 -948)
+								)
+							)
+						)
+						(instance NMOS_4
+							(viewRef NMOS3
+								(cellRef NMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt 2864 -980)
+								)
+							)
+						)
+						(instance NMOS_5
+							(viewRef NMOS3
+								(cellRef NMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt 4336 -948)
+								)
+							)
+						)
+						(instance NMOS_6
+							(viewRef NMOS3
+								(cellRef NMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt 336 -1972)
+								)
+							)
+						)
+						(instance NMOS_7
+							(viewRef NMOS3
+								(cellRef NMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt 1552 -1940)
+								)
+							)
+						)
+						(instance NMOS_8
+							(viewRef NMOS3
+								(cellRef NMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt 2896 -1908)
+								)
+							)
+						)
+						(instance NMOS_9
+							(viewRef NMOS3
+								(cellRef NMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt 4336 -1908)
+								)
+							)
+						)
+						(instance PMOS_1
+							(viewRef PMOS3
+								(cellRef PMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt -912 716)
+								)
+							)
+						)
+						(instance PMOS_2
+							(viewRef PMOS3
+								(cellRef PMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt 336 716)
+								)
+							)
+						)
+						(instance PMOS_3
+							(viewRef PMOS3
+								(cellRef PMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt 1552 716)
+								)
+							)
+						)
+						(instance PMOS_4
+							(viewRef PMOS3
+								(cellRef PMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt 2864 684)
+								)
+							)
+						)
+						(instance PMOS_5
+							(viewRef PMOS3
+								(cellRef PMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt -976 -308)
+								)
+							)
+						)
+						(instance PMOS_6
+							(viewRef PMOS3
+								(cellRef PMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt 336 -340)
+								)
+							)
+						)
+						(instance PMOS_7
+							(viewRef PMOS3
+								(cellRef PMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt 1552 -340)
+								)
+							)
+						)
+						(instance PMOS_8
+							(viewRef PMOS3
+								(cellRef PMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt 2864 -340)
+								)
+							)
+						)
+						(instance PMOS_9
+							(viewRef PMOS3
+								(cellRef PMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt -2224 716)
+								)
+							)
+						)
+						(instance NMOS_10
+							(viewRef NMOS3
+								(cellRef NMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt -2224 -1940)
+								)
+							)
+						)
+						(instance NMOS_11
+							(viewRef NMOS3
+								(cellRef NMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt -976 -916)
+								)
+							)
+						)
+						(instance PMOS_10
+							(viewRef PMOS3
+								(cellRef PMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt 4304 716)
+								)
+							)
+						)
+						(instance PMOS_11
+							(viewRef PMOS3
+								(cellRef PMOS
+									(libraryRef Devices)
+								)
+							)
+							(transform
+								(origin
+									(pt 4304 -340)
+								)
+							)
+						)
+						(net Gnd
+							(joined
+								(portRef Gnd
+									(instanceRef GND1)
+								)
+								(portRef Gnd
+									(instanceRef GND2)
+								)
+								(portRef Gnd
+									(instanceRef GND3)
+								)
+								(portRef Neg
+									(instanceRef V1)
+								)
+								(portRef Neg
+									(instanceRef V2)
+								)
+								(portRef S
+									(instanceRef NMOS_1)
+								)
+								(portRef S
+									(instanceRef NMOS_10)
+								)
+								(portRef S
+									(instanceRef NMOS_6)
+								)
+								(portRef S
+									(instanceRef NMOS_7)
+								)
+								(portRef S
+									(instanceRef NMOS_8)
+								)
+								(portRef S
+									(instanceRef NMOS_9)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -512 -2272)
+										(pt -512 -2784)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 4736 -2848)
+										(pt 4736 -2784)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 3296 -2784)
+										(pt 1952 -2784)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 4736 -2208)
+										(pt 4736 -2784)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -1824 -2240)
+										(pt -1824 -2784)
+										(pt -512 -2784)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 736 -2272)
+										(pt 736 -2784)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 736 -2784)
+										(pt -512 -2784)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 1952 -2240)
+										(pt 1952 -2784)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 1952 -2784)
+										(pt 736 -2784)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 3296 -2784)
+										(pt 3296 -2208)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -3232 -2656)
+										(pt -3232 -2624)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 3296 -2784)
+										(pt 4736 -2784)
+									)
+								)
+							)
+						)
+						(net N_1
+							(joined
+								(portRef D
+									(instanceRef NMOS_1)
+								)
+							)
+						)
+						(net N_2
+							(joined
+								(portRef S
+									(instanceRef NMOS_2)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 736 -1248)
+										(pt 736 -1664)
+									)
+								)
+							)
+						)
+						(net N_3
+							(joined
+								(portRef S
+									(instanceRef NMOS_3)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 1952 -1248)
+										(pt 1952 -1632)
+									)
+								)
+							)
+						)
+						(net N_4
+							(joined
+								(portRef S
+									(instanceRef NMOS_4)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 3264 -1280)
+										(pt 3264 -1600)
+									)
+								)
+							)
+						)
+						(net N_5
+							(joined
+								(portRef S
+									(instanceRef NMOS_5)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 4736 -1248)
+										(pt 4736 -1600)
+									)
+								)
+							)
+						)
+						(net N_6
+							(joined
+								(portRef D
+									(instanceRef NMOS_6)
+								)
+							)
+						)
+						(net N_7
+							(joined
+								(portRef D
+									(instanceRef NMOS_7)
+								)
+							)
+						)
+						(net N_8
+							(joined
+								(portRef D
+									(instanceRef NMOS_8)
+								)
+							)
+						)
+						(net N_9
+							(joined
+								(portRef D
+									(instanceRef NMOS_9)
+								)
+							)
+						)
+						(net Out
+							(joined
+								(portRef Out)
+								(portRef D
+									(instanceRef NMOS_5)
+								)
+								(portRef D
+									(instanceRef PMOS_11)
+								)
+								(portRef G
+									(instanceRef NMOS_11)
+								)
+								(portRef G
+									(instanceRef PMOS_5)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 4736 -640)
+										(pt 5440 -640)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 5440 -640)
+										(pt 5536 -640)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -976 -916)
+										(pt -992 -916)
+										(pt -992 -608)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 4704 -640)
+										(pt 4736 -640)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 4736 -648)
+										(pt 4736 -640)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -992 -608)
+										(pt -1408 -608)
+										(pt -1408 -3296)
+										(pt 5440 -3296)
+										(pt 5440 -640)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -992 -608)
+										(pt -992 -308)
+										(pt -976 -308)
+									)
+								)
+							)
+						)
+						(net Vdd
+							(joined
+								(portRef Pos
+									(instanceRef V2)
+								)
+								(portRef S
+									(instanceRef PMOS_10)
+								)
+								(portRef Vdd
+									(instanceRef Vdd1)
+								)
+								(portRef Vdd
+									(instanceRef Vdd2)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -512 1024)
+										(pt -512 1088)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 4704 1728)
+										(pt 4704 1088)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 4704 1088)
+										(pt 3264 1088)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 4704 1088)
+										(pt 4704 1016)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -512 1088)
+										(pt -1824 1088)
+										(pt -1824 1024)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 736 1024)
+										(pt 736 1088)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 736 1088)
+										(pt -512 1088)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 1952 1024)
+										(pt 1952 1088)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 1952 1088)
+										(pt 736 1088)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 3264 992)
+										(pt 3264 1088)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 3264 1088)
+										(pt 1952 1088)
+									)
+								)
+							)
+						)
+						(net N_10
+							(joined
+								(portRef D
+									(instanceRef NMOS_10)
+								)
+							)
+						)
+						(net N_11
+							(joined
+								(portRef G
+									(instanceRef NMOS_1)
+								)
+								(portRef G
+									(instanceRef NMOS_10)
+								)
+								(portRef G
+									(instanceRef NMOS_6)
+								)
+								(portRef G
+									(instanceRef NMOS_7)
+								)
+								(portRef G
+									(instanceRef NMOS_8)
+								)
+								(portRef G
+									(instanceRef NMOS_9)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -2224 -1940)
+										(pt -2240 -1940)
+										(pt -2240 -2016)
+										(pt -2464 -2016)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 2880 -2560)
+										(pt 4320 -2560)
+										(pt 4320 -1908)
+										(pt 4336 -1908)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -2464 -2016)
+										(pt -2464 -2560)
+										(pt -928 -2560)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -2464 -2016)
+										(pt -3232 -2016)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 1536 -2560)
+										(pt 2880 -2560)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 320 -2560)
+										(pt 1536 -2560)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -928 -2560)
+										(pt 320 -2560)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 2896 -1908)
+										(pt 2880 -1908)
+										(pt 2880 -2560)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 1552 -1940)
+										(pt 1536 -1940)
+										(pt 1536 -2560)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 336 -1972)
+										(pt 320 -1972)
+										(pt 320 -2560)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -912 -1972)
+										(pt -928 -1972)
+										(pt -928 -2560)
+									)
+								)
+							)
+						)
+						(net N_12
+							(joined
+								(portRef D
+									(instanceRef NMOS_11)
+								)
+								(portRef D
+									(instanceRef PMOS_5)
+								)
+								(portRef G
+									(instanceRef NMOS_2)
+								)
+								(portRef G
+									(instanceRef PMOS_6)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -576 -608)
+										(pt 320 -608)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 336 -340)
+										(pt 320 -340)
+										(pt 320 -608)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 320 -608)
+										(pt 320 -948)
+										(pt 336 -948)
+									)
+								)
+							)
+						)
+						(net N_13
+							(joined
+								(portRef S
+									(instanceRef NMOS_11)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -576 -1216)
+										(pt -576 -1664)
+										(pt -512 -1664)
+									)
+								)
+							)
+						)
+						(net N_14
+							(joined
+								(portRef S
+									(instanceRef PMOS_1)
+								)
+							)
+						)
+						(net N_15
+							(joined
+								(portRef D
+									(instanceRef PMOS_2)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 736 416)
+										(pt 736 -32)
+									)
+								)
+							)
+						)
+						(net N_16
+							(joined
+								(portRef S
+									(instanceRef PMOS_2)
+								)
+							)
+						)
+						(net N_17
+							(joined
+								(portRef S
+									(instanceRef PMOS_3)
+								)
+							)
+						)
+						(net N_18
+							(joined
+								(portRef S
+									(instanceRef PMOS_4)
+								)
+							)
+						)
+						(net N_19
+							(joined
+								(portRef D
+									(instanceRef PMOS_1)
+								)
+								(portRef S
+									(instanceRef PMOS_5)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -576 -8)
+										(pt -576 416)
+										(pt -512 416)
+									)
+								)
+							)
+						)
+						(net N_20
+							(joined
+								(portRef S
+									(instanceRef PMOS_6)
+								)
+							)
+						)
+						(net N_21
+							(joined
+								(portRef D
+									(instanceRef NMOS_2)
+								)
+								(portRef D
+									(instanceRef PMOS_6)
+								)
+								(portRef G
+									(instanceRef NMOS_3)
+								)
+								(portRef G
+									(instanceRef PMOS_7)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 736 -640)
+										(pt 1536 -640)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 1552 -340)
+										(pt 1536 -340)
+										(pt 1536 -640)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 1552 -948)
+										(pt 1536 -948)
+										(pt 1536 -640)
+									)
+								)
+							)
+						)
+						(net N_22
+							(joined
+								(portRef D
+									(instanceRef PMOS_3)
+								)
+								(portRef S
+									(instanceRef PMOS_7)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 1952 -40)
+										(pt 1952 416)
+									)
+								)
+							)
+						)
+						(net N_23
+							(joined
+								(portRef D
+									(instanceRef NMOS_3)
+								)
+								(portRef D
+									(instanceRef PMOS_7)
+								)
+								(portRef G
+									(instanceRef NMOS_4)
+								)
+								(portRef G
+									(instanceRef PMOS_8)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 1952 -640)
+										(pt 2848 -640)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 2848 -640)
+										(pt 2848 -340)
+										(pt 2864 -340)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 2848 -640)
+										(pt 2848 -980)
+										(pt 2864 -980)
+									)
+								)
+							)
+						)
+						(net N_24
+							(joined
+								(portRef D
+									(instanceRef PMOS_4)
+								)
+								(portRef S
+									(instanceRef PMOS_8)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 3264 -64)
+										(pt 3264 -40)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 3264 -40)
+										(pt 3264 384)
+									)
+								)
+							)
+						)
+						(net N_25
+							(joined
+								(portRef S
+									(instanceRef PMOS_9)
+								)
+							)
+						)
+						(net N_26
+							(joined
+								(portRef D
+									(instanceRef PMOS_9)
+								)
+								(portRef G
+									(instanceRef PMOS_1)
+								)
+								(portRef G
+									(instanceRef PMOS_10)
+								)
+								(portRef G
+									(instanceRef PMOS_2)
+								)
+								(portRef G
+									(instanceRef PMOS_3)
+								)
+								(portRef G
+									(instanceRef PMOS_4)
+								)
+								(portRef G
+									(instanceRef PMOS_9)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -1824 -1632)
+										(pt -1824 128)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 2848 684)
+										(pt 2864 684)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -928 704)
+										(pt -928 716)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -2224 716)
+										(pt -2240 716)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -1824 128)
+										(pt -1824 416)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -928 1632)
+										(pt 320 1632)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -928 716)
+										(pt -928 1632)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -928 716)
+										(pt -912 716)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 320 1632)
+										(pt 1568 1632)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 320 1632)
+										(pt 320 716)
+										(pt 336 716)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 1568 1632)
+										(pt 2848 1632)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -2240 716)
+										(pt -2240 1632)
+										(pt -928 1632)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt -2240 716)
+										(pt -2240 128)
+										(pt -1824 128)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 2848 672)
+										(pt 2848 684)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 2848 1632)
+										(pt 4032 1632)
+										(pt 4032 704)
+										(pt 4288 704)
+										(pt 4288 716)
+										(pt 4304 716)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 2848 684)
+										(pt 2848 1632)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 1552 716)
+										(pt 1536 716)
+										(pt 1536 704)
+										(pt 1568 704)
+										(pt 1568 1632)
+									)
+								)
+							)
+						)
+						(net N_27
+							(joined
+								(portRef D
+									(instanceRef NMOS_4)
+								)
+								(portRef D
+									(instanceRef PMOS_8)
+								)
+								(portRef G
+									(instanceRef NMOS_5)
+								)
+								(portRef G
+									(instanceRef PMOS_11)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 3264 -672)
+										(pt 4288 -672)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 4288 -672)
+										(pt 4288 -340)
+										(pt 4304 -340)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 4336 -948)
+										(pt 4320 -948)
+										(pt 4320 -960)
+										(pt 4288 -960)
+										(pt 4288 -672)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 3264 -672)
+										(pt 3264 -680)
+									)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 3264 -640)
+										(pt 3264 -672)
+									)
+								)
+							)
+						)
+						(net N_28
+							(joined
+								(portRef D
+									(instanceRef PMOS_10)
+								)
+								(portRef S
+									(instanceRef PMOS_11)
+								)
+							)
+							(figure wire
+								(path
+									(pointList
+										(pt 4704 -40)
+										(pt 4704 416)
+									)
+								)
+							)
+						)
+						(net N_29
+							(joined
+								(portRef Pos
+									(instanceRef V1)
+								)
+							)
+						)
+						(commentGraphics)
+					)
+				)
+			)
+		)
+	)
+)
